@@ -1,0 +1,14 @@
+﻿@model CategoryListViewModel
+
+<h1>@Model.Title</h1>
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+
+    @foreach (var pie in Model.Categories)
+    {
+        <div class="col">
+            <li>@pie.CategoryName</li>
+        </div>
+    }
+
+</div>
