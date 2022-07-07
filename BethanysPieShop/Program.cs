@@ -1,4 +1,5 @@
 using BethanysPieShop.Database;
+using BethanysPieShop.Models;
 using BethanysPieShop.Repositories;
 using BethanysPieShop.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
@@ -20,5 +21,5 @@ if (app.Environment.IsDevelopment())
     app.UseDeveloperExceptionPage();
 
 app.MapDefaultControllerRoute();
-
+DbInitializer.Seed(app);
 app.Run();
