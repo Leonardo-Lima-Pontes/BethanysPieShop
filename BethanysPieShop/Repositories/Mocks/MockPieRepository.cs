@@ -1,7 +1,7 @@
 ﻿using BethanysPieShop.Models;
 using BethanysPieShop.Repositories.Interfaces;
 
-namespace BethanysPieShop.Repositories;
+namespace BethanysPieShop.Repositories.Mocks;
 
 public class MockPieRepository : IPieRepository
 {
