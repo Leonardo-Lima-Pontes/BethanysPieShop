@@ -14,9 +14,6 @@ namespace BethanysPieShop.Controllers
             _categoryRepository = categoryRepository;
         }
 
-        public IActionResult List()
-        {
-            return View(new CategoryListViewModel("All Categories", _categoryRepository.AllCategories));
-        }
+        public IActionResult List() => View(new CategoryListViewModel("All Categories", _categoryRepository.AllCategories));
     }
 }

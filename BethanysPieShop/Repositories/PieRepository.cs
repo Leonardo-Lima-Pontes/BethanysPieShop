@@ -16,6 +16,5 @@ public class PieRepository : IPieRepository
     
     public IEnumerable<Pie> AllPies => _bethanysPieShopDbContext.Pies.Include(pie => pie.Category);
     public IEnumerable<Pie> PiesOfTheWeek => _bethanysPieShopDbContext.Pies.Include(pie => pie.Category).Where(pie => pie.IsPieOfTheWeek);
-
     public Pie? GetPieById(int pieId) => _bethanysPieShopDbContext.Pies.FirstOrDefault(pie => pie.PieId == pieId);
 }
