@@ -1,17 +1,22 @@
-﻿using BethanysPieShop.Repositories.Interfaces;
+﻿using BethanysPieShop.Models;
+using BethanysPieShop.Repositories.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
-namespace BethanysPieShop.Components;
-
-public class CategoryMenu : ViewComponent
+namespace BethanysPieShop.Components
 {
-    private readonly ICategoryRepository _categoryRepository;
-
-    public CategoryMenu(ICategoryRepository categoryRepository)
+    public class CategoryMenu : ViewComponent
     {
-        _categoryRepository = categoryRepository;
-    }
+        private readonly ICategoryRepository _categoryRepository;
 
-    public IViewComponentResult Invoke() => 
-        View(_categoryRepository.AllCategories.OrderBy(category => category.CategoryName));
+        public CategoryMenu(ICategoryRepository categoryRepository)
+        {
+            _categoryRepository = categoryRepository;
+        }
+
+        public IViewComponentResult Invoke()
+        {
+            var categories = _categoryRepository.AllCategories.OrderBy(c => c.CategoryName);
+            return View(categories);
+        }
+    }
 }
