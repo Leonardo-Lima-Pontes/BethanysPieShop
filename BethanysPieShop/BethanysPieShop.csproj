@@ -7,8 +7,9 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="Controllers" />
+      <Folder Include="Views\Contact" />
       <Folder Include="Views\Home" />
+      <Folder Include="Views\Shared\Components\CategoryMenu" />
     </ItemGroup>
 
     <ItemGroup>
