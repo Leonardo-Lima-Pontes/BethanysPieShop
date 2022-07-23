@@ -62,4 +62,9 @@ public class MockPieRepository : IPieRepository
     public IEnumerable<Pie> PiesOfTheWeek => AllPies.Where(pie => pie.IsPieOfTheWeek);
 
     public Pie? GetPieById(int pieId) => AllPies.FirstOrDefault(pie => pie.PieId == pieId);
+    public Pie? GetPieWithCategoryById(int pieId) => AllPies.FirstOrDefault(pie => pie.PieId == pieId);
+    public IEnumerable<Pie>? SearchPies(string searchQuery)
+    {
+        throw new NotImplementedException();
+    }
 }
