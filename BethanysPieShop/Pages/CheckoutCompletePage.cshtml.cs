@@ -1,11 +1,13 @@
-﻿using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace BethanysPieShop.Pages;
-
-public class CheckoutCompletePage : PageModel
+namespace BethanysPieShop.Pages
 {
-    public void OnGet()
+    public class CheckoutCompletePageModel : PageModel
     {
-        ViewData["CheckoutCompleteMessage"] = "Thanks for your order. You' ll soon enjoy your decilous pie!";
+        public void OnGet()
+        {
+            ViewData["CheckoutCompleteMessage"] = "Thanks for your order. You'll soon enjoy our delicious pies!";
+        }
     }
 }
